@@ -278,7 +278,7 @@ def http_path(cam_ip):
                 
             s = socket.socket()
             s.connect((cam_ip, HTTP_PORT))
-            write_log("Connected to " + cam_ip + ":" + str(RTSP_PORT) + "\r\n", 0)
+            write_log("Connected to " + cam_ip + ":" + str(HTTP_PORT) + "\r\n", 0)
             s.send(request)
             response = s.recv(1024)
             if HTTP_400 in response or HTTP_404 in response:
